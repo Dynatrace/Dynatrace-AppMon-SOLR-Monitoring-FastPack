@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="4.1.0.2909" date="3/6/12 1:23 PM">
+  <dashboardconfig memento.version="4.1.0.2909" icon="com.dynatrace.diagnostics.sdk/default.gif" localizationenabled="false" sessiontype="live" locationassource="true" groupname="" authorname="andreas.grabner" opendrilldowninnewdashboard="true" sessionid="SOLR" bgcolor="255,255,255,255" modified="2012-03-06T13:23:03+0100" id="e967dc36-f239-4e17-88b4-4e200a319c4c" revision="00000135-e7f6-7740-88d0-778679869553" created="2012-03-06T13:23:02+0100" description="" name="SOLR Environmental Monitor" modifiedbyname="andreas.grabner" locationascomparesource="false">
+    <reportconfig lines.per.table="100" enabled="true" print.legends="true" orientation="portrait" pagesize="A4" type="PDF" title="" override="false" levels.per.tree="10" description="" print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" />
+    <filter>
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion type="applications" mode="all" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" showjavascript="true" type="browserpathtype" />
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern text="" match="contains" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern text="" match="contains" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion isactive="true" analyzeserverpath="true" type="enduserpath" analyzeenduserpath="true" />
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion severities="" statesmode="all" severitiesmode="all" states="" rulesmode="all" type="incident" />
+      <criterion type="purepaths" mode="all" />
+      <criterion showrendering="true" isactive="false" contenttypegroupsmode="all" javascripttriggersmode="all" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion includemeasurename="true" includetestname="true" type="tests" teststatus="OK" />
+      <criterion enabled="false" filterbyid="false" type="threads" />
+      <criterion type="timeframe">
+        <timeframe type="Last 5min" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset visitsidsetsize="0" />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern text="" match="contains" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern text="" match="contains" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="NIGHT" headertype="HEADLESS" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="org.eclipse.ui.internal.ViewStack@39c63d" selectionindex="0" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="f6dad3b5-3da6-4963-b705-038e99bf3cb6">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="HEADLESS" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.24901186" folderid="org.eclipse.ui.internal.ViewStack@8cc754" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@39c63d" portletconfigorder="d1d1f03b-298b-4432-9efe-2fc15fd355b2">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.2962963" folderid="org.eclipse.ui.internal.ViewStack@11db589" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@8cc754" portletconfigorder="2db02e7e-24cd-43b3-b09a-d22022e137df">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.6795953" folderid="org.eclipse.ui.internal.ViewStack@ce2b60" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@11db589" portletconfigorder="e7a046cf-7216-411f-bc3f-2557084b5f9c">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.47413793" folderid="org.eclipse.ui.internal.ViewStack@125c109" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@ce2b60" portletconfigorder="543a1280-d51d-498f-952c-44114262b32a">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.43424317" folderid="org.eclipse.ui.internal.ViewStack@a87b4d" selectionindex="-1" isplaceholder="true" relatedfolderid="org.eclipse.ui.internal.ViewStack@11db589" portletconfigorder="" />
+      <portletfolder relationtype="BOTTOM" ratio="0.2236842" folderid="org.eclipse.ui.internal.ViewStack@7a83c" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@a87b4d" portletconfigorder="be1eed9f-3976-4a8c-a39c-2e8ba519f8b6">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="HEADLESS" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.5" folderid="8e642433-b432-42fb-a247-c7af41bb7767" selectionindex="-1" isplaceholder="true" relatedfolderid="org.eclipse.ui.internal.ViewStack@7a83c" portletconfigorder="" />
+      <portletfolder relationtype="RIGHT" ratio="0.47480106" folderid="org.eclipse.ui.internal.ViewStack@29ef24" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@7a83c" portletconfigorder="a909c6a5-84de-4a35-b683-6c0d20ca6040">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="HEADLESS" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.18055555" folderid="a8267e4b-505e-4561-a5f5-758921835a61" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@29ef24" portletconfigorder="5d790e1a-d7e3-43e1-8834-9beb0f293bb6">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.1773743" folderid="d6e1f57a-c4f9-4bd0-99d3-7d867150137c" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@7a83c" portletconfigorder="d73dbf3d-e7c3-4e94-84df-9e113f5ea49f">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.3806366" folderid="org.eclipse.ui.internal.ViewStack@c5eec5" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@11db589" portletconfigorder="109db283-3e0e-4a03-a0e5-45000ad59ab6">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.45717344" folderid="org.eclipse.ui.internal.ViewStack@cf56fd" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@c5eec5" portletconfigorder="0ae6d43d-2a4c-4a55-8745-e0c96e0c6de2">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@c5eec5" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="SOLR" bgcolor="236,233,216,255" id="109db283-3e0e-4a03-a0e5-45000ad59ab6" addfilterinfo="false" description="" lastvalue="false" name="Failed Transaction %" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="13" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="1,1" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="TrafficLightChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="percent" groupingvalue="" id="20f8e88a-6e35-43eb-9513-0d2bfd27b334" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Failed Transaction Percentage" sourcecolor="RGB(205,25,25,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="Application" displayrate="10s" systemid="SOLR" unit="percent" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="true" fetchthreshold="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Failed Transaction Percentage" metricgroupkey="Error Detection" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Failed Transaction Percentage" metrickeyid="Failed Transaction Percentage" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_webrequest.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@cf56fd" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="SOLR" bgcolor="236,233,216,255" id="0ae6d43d-2a4c-4a55-8745-e0c96e0c6de2" addfilterinfo="false" description="" lastvalue="false" name="Web Request Time" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="6" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" subchartweights="1000" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" host="true" value="true" agent="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Sum" uiunit="ms" groupingcriterion2="AgentGroup" groupingvalue="" id="4dabbbc7-e424-42ba-9db3-87616c4c545e" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Time" sourcecolor="RGB(0,0,250,255)" sourcetype="MEASURE" dynamicconfig="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" measuretype="ServletMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Time" metricgroupkey="Web Requests" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Time" metrickeyid="Time" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="AgentGroup" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_mem.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@29ef24" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="SOLR" bgcolor="236,233,216,255" id="a909c6a5-84de-4a35-b683-6c0d20ca6040" addfilterinfo="false" description="" lastvalue="false" name="JVM Heap Memory Usage" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="12" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="TrafficLightChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" subchartweights="1000" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" host="true" value="true" agent="true" />
+          </legendcomposition>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="833ad972-de52-453d-a513-c0d4725ab2a7" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Tenured Gen used" sourcecolor="RGB(200,105,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Tenured Gen used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Tenured Gen used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="10acebc1-2125-4242-ba28-1812a56d1df3" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Free Memory" sourcecolor="RGB(155,255,155,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Memory" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Free Memory" metrickeyid="Free Memory" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="5" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="11d4a5a4-b108-4cdd-99fc-180f6e66121b" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Eden Space used" sourcecolor="RGB(255,205,205,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Eden Space used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Eden Space used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="2fca01a1-5d55-4533-8f44-42d19ca237b8" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Survivor Space used" sourcecolor="RGB(255,100,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Survivor Space used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Survivor Space used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="1e4c5ab8-f654-496c-9d00-c54b1c3f7e27" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Old Gen used" sourcecolor="RGB(150,0,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Old Gen used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Old Gen used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="AgentGroup" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_mem.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="d6e1f57a-c4f9-4bd0-99d3-7d867150137c" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="SOLR" bgcolor="236,233,216,255" id="d73dbf3d-e7c3-4e94-84df-9e113f5ea49f" addfilterinfo="false" description="" lastvalue="false" name="JVM non-Heap Memory usage" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="4" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="StackedAreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" subchartweights="1000" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" host="true" value="true" agent="true" />
+          </legendcomposition>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="51b4c16f-21b3-428d-975d-2c6c983b0441" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Code Cache used" sourcecolor="RGB(150,0,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Code Cache used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Code Cache used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="b2d197c0-7afd-4a77-abcd-fc1e6c48b503" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Perm Gen used" sourcecolor="RGB(255,100,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Perm Gen used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Perm Gen used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="AgentGroup" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_thread.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@ce2b60" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="SOLR" bgcolor="236,233,216,255" id="e7a046cf-7216-411f-bc3f-2557084b5f9c" addfilterinfo="false" description="" lastvalue="false" name="Threads" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="8" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="StepChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" subchartweights="1000" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition min="true" splittings="true" max="true" host="true" last="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" host="true" value="true" agent="true" />
+          </legendcomposition>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="number" groupingcriterion2="AgentGroup" groupingvalue="" id="7acddb02-8ded-4e77-bdea-c32d758e4045" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name=".NET Thread Count" sourcecolor="RGB(0,0,250,255)" sourcetype="MEASURE" dynamicconfig="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" measuretype="PerfMonMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid=".NET Thread Count" metricgroupkey=".NET Common Language Runtime" collector="" systemid="SOLR" application="" agenthost="" parentkeyid=".NET Thread Count" metrickeyid=".NET Thread Count" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="74ba4b17-b791-4d5a-b50f-208f293ee56b" aggregationtype="Max" groupingcriterion2="AgentGroup" uiunit="count" groupingvalue="" id="b6677964-3a14-3b10-9f3c-5cbf8c90fb63" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Thread Count" sourcecolor="RGB(0,0,250,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="count" systemid="SOLR" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Thread Count" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Thread Count" metrickeyid="Thread Count" agentname="SOLR" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="SOLR" agentgroup="SOLR" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="number" groupingcriterion2="AgentGroup" groupingvalue="" id="74ba4b17-b791-4d5a-b50f-208f293ee56b" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Thread Count" sourcecolor="RGB(0,0,250,255)" sourcetype="MEASURE" dynamicconfig="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Thread Count" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Thread Count" metrickeyid="Thread Count" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="AgentGroup" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_mem.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@7a83c" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="SOLR" bgcolor="236,233,216,255" id="be1eed9f-3976-4a8c-a39c-2e8ba519f8b6" addfilterinfo="false" description="" lastvalue="false" name="JVM non-Heap Memory usage" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="11" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="TrafficLightChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" subchartweights="1000" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" host="true" value="true" agent="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="09160467-d843-4aa2-a538-b73eff5788e9" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Perm Gen used" sourcecolor="RGB(255,100,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Perm Gen used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Perm Gen used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="485f2f49-e7bd-4657-b027-bc4e084275ec" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Code Cache used" sourcecolor="RGB(150,0,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Code Cache used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Code Cache used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="AgentGroup" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_webrequest.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@11db589" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="SOLR" bgcolor="236,233,216,255" id="2db02e7e-24cd-43b3-b09a-d22022e137df" addfilterinfo="false" description="" lastvalue="false" name="Web Request Count" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="5" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" subchartweights="1000" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" host="true" value="true" agent="true" />
+          </legendcomposition>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="4a1753bc-d858-4d12-9fcb-1201eba23ddb" aggregationtype="Count" groupingcriterion2="AgentGroup" uiunit="number" groupingvalue="" id="e7f64f14-0b23-361f-b383-f646a118bd7f" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Number of Requests" sourcecolor="RGB(176,166,242,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="count" systemid="SOLR" measuretype="ServletMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Number of Requests" metricgroupkey="Web Requests" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Number of Requests" metrickeyid="Count" agentname="SOLR2" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="SOLR2" agentgroup="SOLR" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" groupingcriterion2="AgentGroup" uiunit="number" groupingvalue="" id="b2d09b27-fabc-46c9-b542-794ef4a5c7c4" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Count" sourcecolor="RGB(221,34,202,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="ms" measuretype="ServletMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Count" metricgroupkey="Web Requests" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Count" metrickeyid="Count" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" groupingcriterion2="AgentGroup" uiunit="number" groupingvalue="" id="4a1753bc-d858-4d12-9fcb-1201eba23ddb" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Number of Requests" sourcecolor="RGB(176,166,242,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="ms" measuretype="ServletMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Number of Requests" metricgroupkey="Web Requests" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Number of Requests" metrickeyid="Count" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="b2d09b27-fabc-46c9-b542-794ef4a5c7c4" aggregationtype="Count" groupingcriterion2="AgentGroup" uiunit="number" groupingvalue="" id="6bee1a0b-c5e0-3fea-abd1-6b0697bd02fb" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Count" sourcecolor="RGB(221,34,202,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="count" systemid="SOLR" measuretype="ServletMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Count" metricgroupkey="Web Requests" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Count" metrickeyid="Count" agentname="SOLR" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="SOLR" agentgroup="SOLR" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="4a1753bc-d858-4d12-9fcb-1201eba23ddb" aggregationtype="Count" groupingcriterion2="AgentGroup" uiunit="number" groupingvalue="" id="56315c03-f8c1-30de-a8f9-873cb2a57b28" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Number of Requests" sourcecolor="RGB(176,166,242,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="count" systemid="SOLR" measuretype="ServletMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Number of Requests" metricgroupkey="Web Requests" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Number of Requests" metrickeyid="Count" agentname="SOLR" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="SOLR" agentgroup="SOLR" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="b2d09b27-fabc-46c9-b542-794ef4a5c7c4" aggregationtype="Count" groupingcriterion2="AgentGroup" uiunit="number" groupingvalue="" id="b502a14d-37cc-3a12-ad6f-c31a1fb34c64" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Count" sourcecolor="RGB(221,34,202,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="count" systemid="SOLR" measuretype="ServletMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Count" metricgroupkey="Web Requests" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Count" metrickeyid="Count" agentname="SOLR2" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="SOLR2" agentgroup="SOLR" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="AgentGroup" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@39c63d" locationassource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" heightmode="AdjustToFontSize" bgcolor="236,233,216,255" id="f6dad3b5-3da6-4963-b705-038e99bf3cb6" addfilterinfo="false" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="Solr - Web Request Transaction Monitor" description="" name="Solr Transaction Monitor" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="14" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="14" style="BOLD" name="Arial" />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_mem.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="a8267e4b-505e-4561-a5f5-758921835a61" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="SOLR" bgcolor="236,233,216,255" id="5d790e1a-d7e3-43e1-8834-9beb0f293bb6" addfilterinfo="false" description="" lastvalue="false" name="JVM Heap Memory Usage" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="3" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="StackedAreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" subchartweights="1000" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" host="true" value="true" agent="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="a20e13d4-5804-473a-baea-5b6311e19ba4" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Old Gen used" sourcecolor="RGB(150,0,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Old Gen used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Old Gen used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="6782df40-2f5a-42d2-86a0-1af10d28188e" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Eden Space used" sourcecolor="RGB(255,205,205,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Eden Space used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Eden Space used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="5" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="4b3e663d-9320-4c08-9529-433041367677" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Free Memory" sourcecolor="RGB(155,255,155,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Memory" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Free Memory" metrickeyid="Free Memory" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="68df207f-0790-4909-8b2b-8af17d07d470" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Tenured Gen used" sourcecolor="RGB(200,105,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Tenured Gen used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Tenured Gen used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" groupingcriterion2="AgentGroup" uiunit="megabytes" groupingvalue="" id="bede8cf9-8f56-435e-9462-41b2f7783616" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Sun/Oracle Survivor Space used" sourcecolor="RGB(255,100,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" unit="megabytes" measuretype="MemoryPoolMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Sun/Oracle Survivor Space used" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Sun/Oracle Survivor Space used" metrickeyid="Memory Pool" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="megabytes" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="AgentGroup" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_class.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@125c109" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="SOLR" bgcolor="236,233,216,255" id="543a1280-d51d-498f-952c-44114262b32a" addfilterinfo="false" description="" lastvalue="false" name="Classes" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="9" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="StepChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" subchartweights="1000" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" last="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" host="true" value="true" agent="true" />
+          </legendcomposition>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="number" groupingcriterion2="AgentGroup" groupingvalue="" id="f5244973-d56d-44ab-846a-415de6f1e6b2" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Loaded Classes" sourcecolor="RGB(0,0,250,255)" sourcetype="MEASURE" dynamicconfig="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Loaded Classes" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Loaded Classes" metrickeyid="Loaded Classes" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="f5244973-d56d-44ab-846a-415de6f1e6b2" aggregationtype="Max" groupingcriterion2="AgentGroup" uiunit="count" groupingvalue="" id="afa8b7e5-05ed-30cb-ba9d-32401e410002" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Loaded Classes" sourcecolor="RGB(0,0,250,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="count" systemid="SOLR" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Loaded Classes" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Loaded Classes" metrickeyid="Loaded Classes" agentname="SOLR" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="SOLR" agentgroup="SOLR" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="641733fc-085a-4099-b2e3-7b031c716deb" aggregationtype="Max" groupingcriterion2="AgentGroup" uiunit="count" groupingvalue="" id="e003197a-3c80-38f2-a548-9a8126e95614" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Unloaded Classes" sourcecolor="RGB(200,0,0,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="count" systemid="SOLR" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Unloaded Classes" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Unloaded Classes" metrickeyid="Unloaded Classes" agentname="SOLR" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="SOLR" agentgroup="SOLR" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="number" groupingcriterion2="AgentGroup" groupingvalue="" id="641733fc-085a-4099-b2e3-7b031c716deb" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Unloaded Classes" sourcecolor="RGB(200,0,0,255)" sourcetype="MEASURE" dynamicconfig="false" sessionid="SOLR" groupingcriterion="AgentOrMonitor" displayrate="auto" systemid="SOLR" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Unloaded Classes" metricgroupkey="Java Virtual Machine" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Unloaded Classes" metrickeyid="Unloaded Classes" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="AgentGroup" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_cpu.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@8cc754" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="SOLR" bgcolor="236,233,216,255" id="d1d1f03b-298b-4432-9efe-2fc15fd355b2" addfilterinfo="false" description="" lastvalue="false" name="Server CPU Load" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="10" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="StackedBarChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" subchartweights="1000" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition host="true">
+            <pielabelcomposition unit="true" host="true" value="true" agent="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Max" uiunit="percent" groupingvalue="" id="96cdff3e-90ac-4233-a004-c9728f98987f" fetchmeasurecolor="true" overridesource="true" rate="10s" ratesupported="false" name="Current CPU load" sourcecolor="RGB(0,128,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="SOLR" groupingcriterion="AgentHost" displayrate="auto" systemid="SOLR" unit="percent" measuretype="ProcessPerformanceMeasure" fetch.dynamic.measures="true" fetchthreshold="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Current CPU load" metricgroupkey="Process Performance" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Current CPU load" metrickeyid="Current CPU load" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="96cdff3e-90ac-4233-a004-c9728f98987f" aggregationtype="Max" uiunit="percent" groupingvalue="" id="b35af832-ac5e-3590-9707-5353499e4848" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Current CPU load" sourcecolor="RGB(122,235,208,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="SOLR" groupingcriterion="AgentHost" displayrate="10s" unit="percent" systemid="SOLR" measuretype="ProcessPerformanceMeasure" fetch.dynamic.measures="true" fetchthreshold="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Current CPU load" metricgroupkey="Process Performance" collector="" systemid="SOLR" application="" agenthost="" parentkeyid="Current CPU load" metrickeyid="Current CPU load" agentname="-" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="SOLR2" agentgroup="SOLR" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="AgentHost" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Down" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+
